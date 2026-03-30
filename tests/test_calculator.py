@@ -7,3 +7,9 @@ assert divide(7, 2) == 3.5
 def test_divide_by_zero():
 with pytest.raises(ValueError, match="Cannot divide by zero")
 divide(5, 0)
+
+from src.calculator import power
+def test_power():
+assert power(2, 3) == 8
+assert power(5, 0) == 1
+assert power(2,-1) == 0.5
